@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MachineLearningPhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Js-fWS">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="2ox-bp-mQ2"/>
+                                    <constraint firstAttribute="height" constant="375" id="Pzn-s0-BeK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WmN-Sq-lYk">
+                                <rect key="frame" x="0.0" y="529" width="375" height="92"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVG-1y-FNO">
+                                <rect key="frame" x="0.0" y="629" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="5HI-rW-1Wl"/>
+                                    <constraint firstAttribute="height" constant="30" id="9Nw-Yf-jjS"/>
+                                </constraints>
+                                <state key="normal" title="Tomar foto"/>
+                                <connections>
+                                    <action selector="tomarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNS-bg-ful"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJZ-8A-mQa">
+                                <rect key="frame" x="263" y="629" width="112" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BrH-AL-GTu"/>
+                                    <constraint firstAttribute="width" constant="112" id="xxr-if-HMk"/>
+                                </constraints>
+                                <state key="normal" title="Seleccionar foto"/>
+                                <connections>
+                                    <action selector="seleccionarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GX2-3V-aiK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9sc-Js-fWS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Qa-Wm-Wzo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JVG-1y-FNO" secondAttribute="bottom" constant="8" id="1r2-wN-aGr"/>
+                            <constraint firstItem="WmN-Sq-lYk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9WJ-1o-Qpo"/>
+                            <constraint firstItem="JVG-1y-FNO" firstAttribute="top" secondItem="WmN-Sq-lYk" secondAttribute="bottom" constant="8" id="D2A-44-sZi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sJZ-8A-mQa" secondAttribute="trailing" id="JdV-JH-4H8"/>
+                            <constraint firstItem="WmN-Sq-lYk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RZb-u0-qVB"/>
+                            <constraint firstItem="JVG-1y-FNO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RpO-pQ-1hM"/>
+                            <constraint firstItem="9sc-Js-fWS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wl9-kc-3l5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJZ-8A-mQa" secondAttribute="bottom" constant="8" id="eZs-iO-88m"/>
+                            <constraint firstItem="WmN-Sq-lYk" firstAttribute="top" secondItem="9sc-Js-fWS" secondAttribute="bottom" constant="8" id="xbk-dj-pfp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataImage" destination="9sc-Js-fWS" id="kQu-NS-356"/>
+                        <outlet property="dataLabel" destination="WmN-Sq-lYk" id="sOE-EF-be7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="340" height="191"/>
+    </resources>
+</document>
